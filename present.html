@@ -2,8 +2,9 @@
 <head>
   <title>     </title>
 </head>
+<center> <font face="impact" color="Black" style="font-size:150%"># Worry... dot... #</font> </center>
 <body  onkeydown="keyDown(event)">
-  <canvas id="canvas" width="500" height="500"
+  <center><canvas id="canvas" width="500" height="500"
     style="border:5px solid orange;">
   </canvas>
 
@@ -17,7 +18,7 @@
     <font id="time" face="impact" color="red" style="font-size:150%">I</font>
   </div>
 
-
+</center>
   
 
 <script type="text/javascript">
@@ -72,24 +73,47 @@ function start() {
 
      document.getElementById("time").innerHTML = I;
 
-      function ScorePlus(){
-        document.getElementById("score").innerHTML = (Z += 1);
-      }
+//function score(){
+    if(ball.x < canvas.width || ball.x > ball.radius || ball.y < canvas.height || ball.y > ball.radius){
+         return false;
+       }
+         else
+         {
+          (ball.y > canvas.height - ball.radius || ball.y < ball.radius || all.x > canvas.width - ball.radius || ball.x < ball.radius){
+            return true;
+          
+         }
+         //},1000);
+    } 
+   
+//}
 
-      console.log(Z);
+    if(= false){
+      var sum = 0;
+      setInterval(function(){
+        document.getElementById("time").innerHTML = (I += 0);
+      },1000);
+      return sum = I ;
 
+    }
+
+    else if(!= true){
+        
+         confirm("Your  Score  is" +"       "+ I );
+    
+    }
 
 function update() {
   canvas.width = canvas.width; // reset canvas
 
   if (ball.x > canvas.width - ball.radius || ball.x < ball.radius) {
       keyDown();
-      
+      score();
   }
 
   if (ball.y > canvas.height - ball.radius || ball.y < ball.radius ) {
       keyDown();
-
+      score();
   }
 
   ball.x += ball.speedX;
@@ -103,6 +127,8 @@ function render() {
   context.fill();
 }
       
+
+      
 function random(to, from){
       from = from || 0
       return Math.floor((Math.random() * to) + from);
@@ -111,28 +137,6 @@ function random(to, from){
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
